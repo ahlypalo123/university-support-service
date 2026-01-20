@@ -1,0 +1,47 @@
+classDiagram
+    class RequestApiDelegate {
+        <<interface>>
+        +createRequest(SupportRequest)
+    }
+
+    class RequestService {
+        -RequestRepository repository
+        -NotificationService notificationService
+        -Logger logger
+        +processRequest(studentId, topic, text, channel, isUrgent)
+    }
+
+    class RequestRepository {
+        <<interface>>
+        +save(SupportRequest)
+        +existsByStudentIdAndTopic(studentId, topic)
+    }
+
+    class NotificationService {
+        <<interface>>
+        +sendNotification(studentId, message, channel)
+    }
+
+    class Logger {
+        <<interface>>
+        +info(message)
+        +urgent(message)
+    }
+
+    class InMemoryRequestRepository {
+    }
+
+    class ConsoleNotificationService {
+    }
+
+    class ConsoleLogger {
+    }
+
+    RequestApiDelegate ..> RequestService : uses
+    RequestService --> RequestRepository : depends
+    RequestService --> NotificationService : depends
+    RequestService --> Logger : depends
+
+    RequestRepository <|.. InMemoryRequestRepository : implements
+    NotificationService <|.. ConsoleNotificationService : implements
+    Logger <|.. ConsoleLogger : implements

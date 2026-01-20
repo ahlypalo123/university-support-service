@@ -1,0 +1,54 @@
+openapi: 3.0.3
+info:
+  title: University Support Service API
+  description: API for processing student support requests
+  version: 1.0.0
+paths:
+  /request:
+    post:
+      summary: Create a new support request
+      operationId: createRequest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SupportRequest'
+      responses:
+        '200':
+          description: Request processed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SupportResponse'
+        '400':
+          description: Invalid request
+components:
+  schemas:
+    SupportRequest:
+      type: object
+      required:
+        - studentId
+        - topic
+        - text
+        - channel
+        - urgentFlag
+      properties:
+        studentId:
+          type: string
+        topic:
+          type: string
+        text:
+          type: string
+        channel:
+          type: string
+          enum: [email, messenger]
+        urgentFlag:
+          type: boolean
+    SupportResponse:
+      type: object
+      properties:
+        message:
+          type: string
+        requestId:
+          type: string
