@@ -46,6 +46,9 @@
       </state>
     </system>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -56,9 +59,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.Build university-support-service.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RequestServiceTest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.university-support-service [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.university-support-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/ahlyp/iubip/projects/university-support-service&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -180,7 +191,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1768921262690</updated>
-      <workItem from="1768921264606" duration="1635000" />
+      <workItem from="1768921264606" duration="2123000" />
     </task>
     <servers />
   </component>
